@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edible Layers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .animate-bounce {
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 via-amber-50 to-orange-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg class="text-green-600" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                </svg>
+                <span class="text-2xl font-bold bg-gradient-to-r from-green-600 to-amber-600 bg-clip-text text-transparent">
+                    EDIBLE LAYERS
+                </span>
+            </div>
+            <div class="hidden md:flex gap-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-green-600 font-semibold">Home</a>
+                <a href="#products" class="nav-link text-gray-700 hover:text-green-600 font-semibold">Products</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-green-600 font-semibold">About</a>
+                <a href="#mission" class="nav-link text-gray-700 hover:text-green-600 font-semibold">Mission</a>
+            </div>
+            <button class="bg-gradient-to-r from-green-600 to-amber-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-xl">
+                Shop Now
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-green-100 px-6 py-3 rounded-full mb-8 shadow-lg">
+                <svg class="text-green-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="6"/>
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                </svg>
+                <span class="text-green-800 font-semibold">100% Eco-Friendly & Delicious</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-green-600 via-amber-500 to-orange-600 bg-clip-text text-transparent">
+                    Sustainability
+                </span>
+                <br>
+                <span class="text-gray-800">Meets Flavor</span>
+            </h1>
+            
+            <p class="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
+                In every sip and bite
+            </p>
+            
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Redefining the way you enjoy drinks with innovative edible pods crafted from cheese, coffee, and chocolate
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" class="bg-gradient-to-r from-green-600 to-amber-600 text-white px-10 py-5 rounded-full text-lg font-bold hover:shadow-2xl flex items-center justify-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                    </svg>
+                    Discover Our Flavors
+                </a>
+                <a href="#about" class="bg-white text-gray-700 px-10 py-5 rounded-full text-lg font-bold hover:shadow-xl border-2 border-gray-200">
+                    Learn More
+                </a>
+            </div>
+            
+            <svg class="mt-16 mx-auto text-green-600 animate-bounce" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m6 9 6 6 6-6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-black mb-6 text-gray-800">
+                    Our Edible Pods
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Each layer designed to enhance your experience while eliminating waste
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Coffee Fusion -->
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center mb-6 mx-auto shadow-xl">
+                        <svg class="text-white" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                            <line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="text-3xl font-black text-gray-800 mb-2 text-center">Coffee Fusion</h3>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-black bg-gradient-to-r from-amber-600 to-orange-700 bg-clip-text text-transparent">৳40</span>
+                        <span class="text-gray-500 text-lg ml-2">/ pack</span>
+                    </div>
+                    
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Bold, aromatic layers that enhance every sip with rich coffee notes
+                    </p>
+                    
+                    <button class="w-full bg-gradient-to-r from-amber-600 to-orange-700 text-white py-4 rounded-2xl font-bold text-lg hover:shadow-xl flex items-center justify-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Classic Straw -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 relative">
+                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                        Best Value!
+                    </div>
+                    
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-6 mx-auto shadow-xl">
+                        <svg class="text-white" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="text-3xl font-black text-gray-800 mb-2 text-center">Classic Straw</h3>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-black bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">৳25</span>
+                        <span class="text-gray-500 text-lg ml-2">/ pack</span>
+                    </div>
+                    
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Our signature eco-friendly straw that works with any beverage
+                    </p>
+                    
+                    <button class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white py-4 rounded-2xl font-bold text-lg hover:shadow-xl flex items-center justify-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Cheese Pods -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center mb-6 mx-auto shadow-xl">
+                        <svg class="text-white" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 2h8"/><path d="M9 2v2.789a4 4 0 0 1-.672 2.219l-.656.984A4 4 0 0 0 7 10.212V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.789a4 4 0 0 0-.672-2.219l-.656-.984A4 4 0 0 1 15 4.788V2"/>
+                            <path d="M7 15a6.472 6.472 0 0 1 5 0 6.47 6.47 0 0 0 5 0"/>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="text-3xl font-black text-gray-800 mb-2 text-center">Cheese Pods</h3>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-black bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">৳35</span>
+                        <span class="text-gray-500 text-lg ml-2">/ pack</span>
+                    </div>
+                    
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Rich, savory notes that complement your favorite beverages perfectly
+                    </p>
+                    
+                    <button class="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-4 rounded-2xl font-bold text-lg hover:shadow-xl flex items-center justify-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 bg-gradient-to-br from-green-50 to-amber-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-800 leading-tight">How It Works</h2>
+                    <p class="text-xl text-gray-600 mb-12">
+                        Experience sustainability without compromising on taste or convenience
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-green-600 text-white flex items-center justify-center font-black text-2xl flex-shrink-0 shadow-lg">1</div>
+                            <div>
+                                <h3 class="font-black text-2xl mb-2 text-gray-800">Choose Your Flavor</h3>
+                                <p class="text-gray-600 text-lg leading-relaxed">Select from coffee, classic straw, or cheese pods based on your drink</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-600 text-white flex items-center justify-center font-black text-2xl flex-shrink-0 shadow-lg">2</div>
+                            <div>
+                                <h3 class="font-black text-2xl mb-2 text-gray-800">Enjoy Your Drink</h3>
+                                <p class="text-gray-600 text-lg leading-relaxed">Our edible straws dissolve naturally while adding delicious flavor layers</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-600 text-white flex items-center justify-center font-black text-2xl flex-shrink-0 shadow-lg">3</div>
+                            <div>
+                                <h3 class="font-black text-2xl mb-2 text-gray-800">Zero Waste</h3>
+                                <p class="text-gray-600 text-lg leading-relaxed">Nothing left behind but good taste, great memories, and a cleaner planet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="w-full h-96 md:h-[500px] rounded-3xl bg-gradient-to-br from-green-400 via-amber-400 to-orange-500 shadow-2xl flex items-center justify-center overflow-hidden">
+                        <div class="relative z-10 text-white text-center p-8">
+                            <svg class="mx-auto mb-4 animate-pulse" width="64" height="64" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                            </svg>
+                            <p class="text-3xl font-black">Good for You,<br/>Good for Earth</p>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-2xl">
+                        <div class="text-4xl font-black text-green-600">500K+</div>
+                        <div class="text-gray-600 font-semibold">Straws Saved</div>
+                    </div>
+                    
+                    <div class="absolute -top-8 -right-8 bg-white rounded-2xl p-6 shadow-2xl">
+                        <div class="text-4xl font-black text-amber-600">100%</div>
+                        <div class="text-gray-600 font-semibold">Biodegradable</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-32 px-6 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-black mb-10 leading-tight">
+                <span class="bg-gradient-to-r from-green-600 via-amber-500 to-orange-600 bg-clip-text text-transparent">
+                    Make Sustainability<br/>Irresistible
+                </span>
+            </h2>
+            
+            <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-16 max-w-4xl mx-auto">
+                We're committed to reducing single-use plastic waste and inspiring more sustainable choices, one sip at a time. Our edible layers dissolve naturally, leaving behind nothing but good taste and good experience.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-12 mt-20">
+                <div>
+                    <div class="text-6xl md:text-7xl font-black text-green-600 mb-4">100%</div>
+                    <div class="text-gray-600 text-xl font-semibold">Edible & Biodegradable</div>
+                </div>
+                
+                <div>
+                    <div class="text-6xl md:text-7xl font-black text-amber-600 mb-4">0</div>
+                    <div class="text-gray-600 text-xl font-semibold">Plastic Waste</div>
+                </div>
+                
+                <div>
+                    <div class="text-6xl md:text-7xl font-black text-orange-600 mb-4">3</div>
+                    <div class="text-gray-600 text-xl font-semibold">Delicious Flavors</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 px-6 bg-gradient-to-r from-green-600 via-emerald-600 to-amber-600">
+        <div class="max-w-5xl mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">
+                Ready to Layer Sustainability<br/>with Indulgence?
+            </h2>
+            <p class="text-xl md:text-2xl mb-12 opacity-95 font-light">
+                Join thousands making eco-friendly living enjoyable, convenient, and exciting
+            </p>
+            <button class="bg-white text-green-700 px-12 py-6 rounded-full text-xl font-black hover:shadow-2xl flex items-center gap-3 mx-auto">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                </svg>
+                Start Your Journey
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                        </svg>
+                        <span class="text-2xl font-black">EDIBLE LAYERS</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Where sustainability meets flavor in every sip and bite. Making eco-friendly living irresistible.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-black text-lg mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#products" class="block text-gray-400 hover:text-white">Products</a>
+                        <a href="#about" class="block text-gray-400 hover:text-white">About Us</a>
+                        <a href="#mission" class="block text-gray-400 hover:text-white">Our Mission</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-black text-lg mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p>hello@ediblelayers.com</p>
+                        <p>+880 XXX-XXXX</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                © 2024 Edible Layers. Making sustainability irresistible.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
